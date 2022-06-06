@@ -1,0 +1,504 @@
+AvizStudioTools - ATree3D
+3.0
+1
+0
+0
+0
+0
+0
+0
+0
+DataStream Start
+DataStream New
+(
+	globalOpenATree3D.Tree3Dv3 \
+	ui:(
+		globalOpenATree3D.Tree3Dv3ui \
+		EditLevel:2  \
+		DirMod:false  \
+		PaintMod:false  \
+		PosMod:false  \
+		NoiseSel:#shapes  \
+		ScaleMod:false  \
+		RadiusMod:false  \
+		ShapeMod:false  \
+	) \
+	Filters:(
+		globalOpenATree3D.Tree3Dv3filters \
+		NWcolor:(color 140 110 50)  \
+		preview:	#(	false, false, false, false  ) \
+		LWcolor:(color 105 150 85)  \
+		Build:	#(	true, true, true, true  ) \
+		MaterialBuild:true  \
+		MaterialPreview:false  \
+		instance:	#(	false, false, false, false  ) \
+		TWcolor:(color 45 35 35)  \
+		SpeedPreview:false  \
+		FWcolor:(color 120 45 45)  \
+		attach:	#(	true, true, true, false  ) \
+	) \
+	branches:(
+		globalOpenATree3D.Tree3Dv3data \
+		radius:#( 
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,1.75], [8,1.55], [20,1.1], [50,0.8], [100,0.4]  ) \
+				int:100  \
+			), \
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,1.25], [8,1.05], [20,0.9], [50,0.6], [100,0.4]  ) \
+				int:100  \
+			) \
+		) \
+		dirRto:	#(	3.0, 3.0  ) \
+		dirBlendSME:#( 
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,90], [50,45], [100,0]  ) \
+				int:100  \
+			) \
+		) \
+		sectionsAdvNoiseVals:#( 
+				#(	10.0, 10.0, 5.0, 1.0  ) \
+		) \
+		Splines:#( 
+			(
+				globalOpenATree3D.Aspline \
+				kP:#( 
+						#(	[0,0,0], [12.5261,0.447597,5.90423], [44.9865,4.20143,9.83075], [111.999,-2.47761,2.52787], [166.137,-2.14547,9.53461]  ) \
+				) \
+				inV:#( 
+						#(	[0,0,0], [9.89839,0.131133,5.15641], [30.1858,4.00196,10.2314], [96.9644,-2.58507,2.76203], [148.59,-1.82856,6.21566]  ) \
+				) \
+				seg:#( 
+						#(	#curve, #curve, #curve, #curve, #curve  ) \
+				) \
+				name:(try("Branches_First")catch("")) \
+				CloseSpline:	#(	false  ) \
+				kT:#( 
+						#(	#bezierCorner, #bezier, #bezier, #bezier, #bezierCorner  ) \
+				) \
+				versions:#() \
+				outV:#( 
+						#(	[2.49727,0.411979,1.09504], [24.659,1.9088,9.35714], [59.7875,4.4009,9.43015], [127.032,-2.37015,2.29375], [166.137,-2.14547,9.53461]  ) \
+				) \
+			), \
+			(
+				globalOpenATree3D.Aspline \
+				kP:#( 
+						#(	[0,0,0], [28.3641,-7.06581,3.16797], [66.2824,-12.1719,3.1423], [119.65,-8.81464,-0.015509], [168.393,-7.84045,2.95605]  ) \
+				) \
+				inV:#( 
+						#(	[0,0,0], [25.5267,-6.28476,3.07644], [56.8043,-12.2977,3.53567], [99.4575,-9.87249,0.0338666], [151.465,-7.29111,1.13081]  ) \
+				) \
+				seg:#( 
+						#(	#curve, #curve, #curve, #curve, #curve  ) \
+				) \
+				name:(try("Branches_First")catch("")) \
+				CloseSpline:	#(	false  ) \
+				kT:#( 
+						#(	#bezierCorner, #bezier, #bezier, #bezier, #bezierCorner  ) \
+				) \
+				versions:#() \
+				outV:#( 
+						#(	[2.99687,-2.13554,1.09501], [41.4655,-10.6722,3.59061], [75.7608,-12.0462,2.74895], [139.841,-7.75685,-0.0648582], [168.393,-7.84045,2.95605]  ) \
+				) \
+			) \
+		) \
+		move:#( 
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,45], [50,70], [100,100]  ) \
+				int:100  \
+			), \
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,30], [50,60], [100,100]  ) \
+				int:100  \
+			) \
+		) \
+		genVCfrom:	#(	[0,0,0]  ) \
+		genVCto:	#(	[67,67,67]  ) \
+		genRVM:	#(	false  ) \
+		PaintPoints:	#(	5, 4, 3  ) \
+		paintAngles:	#(	0  ) \
+		material:	#(	0  ) \
+		fixedRad:	#(	0.0  ) \
+		dirBlendRto:	#(	0  ) \
+		sectionsAdvNoiseOn:	#(	false, false  ) \
+		surface:	#(	1  ) \
+		DirA:#( 
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,72.6575], [36.1585,59.4884], [75,58.6863], [100,20]  ) \
+				int:100  \
+			), \
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,60], [50,40], [100,10]  ) \
+				int:100  \
+			) \
+		) \
+		genVCfromParent:	#(	false  ) \
+		paintSegments:	#(	0  ) \
+		sides:	#(	6, 5, 4  ) \
+		distance:	#(	20  ) \
+		dirBlendAto:	#(	0  ) \
+		volume:	#(	1  ) \
+		fromToMatID:	#(	[1,1]  ) \
+		mapTileUV:	#(	[1,1]  ) \
+		genVC:	#(	false  ) \
+		surfaceSME:#( 
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[10,0], [35,40], [70,80]  ) \
+				int:100  \
+			) \
+		) \
+		count:	#(	12, 5, 4, 3, 2  ) \
+		shapesAdvNoiseVals:#( 
+				#(	5.0, 100.0, 5.0, 0.5  ) \
+		) \
+		subDiv:	#(	3, 2, 1  ) \
+		dirAto:	#(	3.0, 3.0  ) \
+		shapesAdvNoiseOn:	#(	false, false  ) \
+		spiralStep:	#(	3.5, 0  ) \
+		scale:#( 
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,0.65], [16.1,0.8], [52,0.75], [100,0.5]  ) \
+				int:100  \
+			), \
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,0.5], [60,0.4], [100,0.3]  ) \
+				int:100  \
+			), \
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,0.7], [60,0.7], [100,0.5]  ) \
+				int:100  \
+			) \
+		) \
+		Twist:	#(	0.0  ) \
+		DirR:#( 
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,0], [100,0]  ) \
+				int:100  \
+			), \
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,-25], [100,15]  ) \
+				int:100  \
+			), \
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,-35], [100,-20]  ) \
+				int:100  \
+			) \
+		) \
+		sectionsAdvSplines:#() \
+		splinesScale:	#(	1.0  ) \
+		sectionsAdvType:	#(	#none  ) \
+		type:#branches  \
+		countMul:	#(	1, 1  ) \
+		angle:	#(	0.0  ) \
+		radiusMul:	#(	0.6, 0.9  ) \
+		genRVMfrom:	#(	[255,255,255]  ) \
+		genRVMto:	#(	[0,0,0]  ) \
+		shapesAdvType:	#(	#first  ) \
+	) \
+	name:(try("StartupTreeV3")catch("")) \
+	params:(
+		globalOpenATree3D.Tree3Dv3params \
+		BranchLevels:3  \
+		Volumes:#() \
+		Surfaces:#() \
+		LeavesRandomMul:0.25  \
+		LeavesTypesCount:1  \
+		materialsSelection:0  \
+		volumesScale:	#(	1.0  ) \
+		RandomRotation:360.0  \
+		RandomA:35.0  \
+		materialsNames:#() \
+		surfacesScale:	#(	1.0  ) \
+		units:#centimeters  \
+		TrunkCount:1  \
+		materialsDef:#() \
+		SkipElements:0.0  \
+		seed:1  \
+		RandomNext:50.0  \
+		BranchRadMin:0.1  \
+		unitsMul:1.0  \
+		RandomL:35.0  \
+	) \
+	leaves:(
+		globalOpenATree3D.Tree3Dv3data \
+		dirRto:	#(	1.0, 1  ) \
+		dirBlendSME:#( 
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,10], [50,50], [100,90]  ) \
+				int:100  \
+			) \
+		) \
+		genToLevel:	#(	-1  ) \
+		sectionsAdvNoiseVals:#( 
+				#(	10.0, 10.0, 5.0, 1.0  ) \
+		) \
+		meshes:#( 
+			(
+				globalOpenATree3D.Amesh \
+				f:	#(	[6,5,2], [2,3,6], [9,8,2], [2,5,9], [3,4,10], [10,6,3], [8,7,1], [1,2,8], [2,11,12], \
+						[12,3,2], [2,14,15], [15,11,2], [16,4,3], [3,12,16], [1,13,14], [14,2,1]  ) \
+				VCf:#() \
+				s:	#(	1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 2, 2  ) \
+				VCv:#() \
+				TXch:#() \
+				name:(try("Leaves_V3")catch("")) \
+				TXf:	#(	[6,5,2], [2,3,6], [9,8,2], [2,5,9], [3,4,10], [10,6,3], [8,7,1], [1,2,8], [2,11,12], \
+						[12,3,2], [2,14,15], [15,11,2], [16,4,3], [3,12,16], [1,13,14], [14,2,1]  ) \
+				TXv:	#(	[0.499556,0.0022182,0], [0.50024,0.411624,0], [0.500723,0.700407,0], [0.501222,0.999292,0], [0.00196112,0.434956,0], [0.0461246,0.668748,0], [0.490183,0.00267018,0], [0.490167,0.177036,0], [0.129267,0.233995,0], \
+						[0.194342,0.864424,0], [0.998595,0.433012,0], [0.955213,0.666975,0], [0.508931,0.00263363,0], [0.50953,0.176998,0], [0.870618,0.232548,0], [0.80765,0.863227,0]  ) \
+				versions:#() \
+				V:	#(	[0,0,0], [5.38014,0,0.920532], [9.17516,0,0.880259], [13.1029,0,0.000586952], [5.674,3.64093,-0.679887], [8.74747,3.32111,-0.604071], [0.00569153,0.0684814,-0.0291133], [2.29709,0.0707397,0.354406], [3.03635,2.70831,-0.342412], \
+						[11.3227,2.24054,-0.25817], [5.674,-3.64093,-0.679887], [8.74747,-3.32111,-0.604071], [0.00569153,-0.0684814,-0.0291133], [2.29709,-0.0707397,0.354406], [3.03635,-2.70831,-0.342412], [11.3227,-2.24054,-0.25817]  ) \
+				m:	#(	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2  ) \
+				e:#( 
+						#(	true, true, false  ), \
+						#(	true, true, false  ), \
+						#(	true, true, false  ), \
+						#(	true, true, false  ), \
+						#(	true, true, false  ), \
+						#(	true, true, false  ), \
+						#(	true, true, false  ), \
+						#(	true, true, false  ), \
+						#(	true, true, false  ), \
+						#(	true, true, false  ), \
+						#(	true, true, false  ), \
+						#(	true, true, false  ), \
+						#(	true, true, false  ), \
+						#(	true, true, false  ), \
+						#(	true, true, false  ), \
+						#(	true, true, false  ) \
+				) \
+			) \
+		) \
+		move:#( 
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,23.04], [50,54.93], [100,100]  ) \
+				int:100  \
+			) \
+		) \
+		genVCfrom:	#(	[0,0,0]  ) \
+		genVCto:	#(	[67,67,67]  ) \
+		genRVM:	#(	false  ) \
+		PaintPoints:	#(	5, 4, 3  ) \
+		paintAngles:	#(	0  ) \
+		material:	#(	0  ) \
+		dirBlendRto:	#(	0  ) \
+		sectionsAdvNoiseOn:	#(	false, false  ) \
+		surface:	#(	1  ) \
+		DirA:#( 
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,90], [50,60], [100,10]  ) \
+				int:100  \
+			) \
+		) \
+		genFromLevel:	#(	2  ) \
+		genVCfromParent:	#(	false  ) \
+		paintSegments:	#(	0  ) \
+		distance:	#(	10  ) \
+		dirBlendAto:	#(	0  ) \
+		volume:	#(	0  ) \
+		fromToMatID:	#(	[1,1]  ) \
+		mapTileUV:	#(	[1,1]  ) \
+		genVC:	#(	false  ) \
+		surfaceSME:#( 
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[10,50], [50,70], [90,90]  ) \
+				int:100  \
+			) \
+		) \
+		count:	#(	0  ) \
+		shapesAdvNoiseVals:#( 
+				#(	5.0, 100.0, 5.0, 0.5  ) \
+		) \
+		maxTilt:	#(	10.0  ) \
+		dirAto:	#(	1.0, 1  ) \
+		shapesAdvNoiseOn:	#(	false, false  ) \
+		meshesScale:	#(	1.0  ) \
+		spiralStep:	#(	0  ) \
+		scale:#( 
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,1.34], [60,1.23], [100,0.84]  ) \
+				int:100  \
+			) \
+		) \
+		DirR:#( 
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,-33], [100,4.92]  ) \
+				int:100  \
+			) \
+		) \
+		sectionsAdvSplines:#() \
+		parentScale:	#(	0.25  ) \
+		sectionsAdvType:	#(	#none  ) \
+		type:#leaves  \
+		countMul:	#(	1  ) \
+		genRVMfrom:	#(	[255,255,255]  ) \
+		genRVMto:	#(	[0,0,0]  ) \
+		shapesAdvType:	#(	#first  ) \
+	) \
+	trunks:(
+		globalOpenATree3D.Tree3Dv3data \
+		radius:#( 
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,9.62], [2.96895,7.9], [7.42977,6.42], [32.706,4.5], [83.9528,1.6], [100,0.3]  ) \
+				int:100  \
+			) \
+		) \
+		dirBlendSME:#() \
+		sectionsAdvNoiseVals:#( 
+				#(	10.0, 10.0, 5.0, 1.0  ) \
+		) \
+		Splines:#( 
+			(
+				globalOpenATree3D.Aspline \
+				kP:#( 
+						#(	[0,0,0], [0.0704315,-0.447972,50.0338], [-0.392366,-3.28892,152.386], [7.32101,9.60347,259.639], [-0.153603,4.44824,371.868]  ) \
+				) \
+				inV:#( 
+						#(	[0,0,0], [0.135829,0.100186,24.6361], [-1.6008,-4.96415,117.452], [7.28122,8.31394,223.059], [4.86926,9.17459,333.629]  ) \
+				) \
+				seg:#( 
+						#(	#curve, #curve, #curve, #curve, #curve  ) \
+				) \
+				name:(try("Trunk")catch("")) \
+				CloseSpline:	#(	false  ) \
+				kT:#( 
+						#(	#bezier, #smooth, #smooth, #smooth, #smooth  ) \
+				) \
+				versions:#() \
+				outV:#( 
+						#(	[0.68443,6.80543e-006,6.19956], [0.00503403,-0.99613,75.4315], [0.81606,-1.61367,187.32], [7.36081,10.893,296.219], [-0.153603,4.44824,371.868]  ) \
+				) \
+			) \
+		) \
+		genVCfrom:	#(	[0,0,0]  ) \
+		genVCto:	#(	[67,67,67]  ) \
+		genRVM:	#(	false  ) \
+		PaintPoints:	#(	7  ) \
+		paintAngles:	#(	0  ) \
+		material:	#(	0  ) \
+		fixedRad:	#(	0.0  ) \
+		dirBlendRto:	#(	0  ) \
+		sectionsAdvNoiseOn:	#(	false, false  ) \
+		surface:	#(	1  ) \
+		genVCfromParent:	#(	false  ) \
+		paintSegments:	#(	0  ) \
+		sides:	#(	10  ) \
+		dirBlendAto:	#(	0  ) \
+		volume:	#(	0  ) \
+		fromToMatID:	#(	[1,1]  ) \
+		mapTileUV:	#(	[1,1]  ) \
+		genVC:	#(	false  ) \
+		surfaceSME:#( 
+			(
+				globalOpenATree3D.Acurve \
+				q:0.35  \
+				imax:20  \
+				tr:0.0001  \
+				p:	#(	[0,0], [50,5], [100,50]  ) \
+				int:100  \
+			) \
+		) \
+		offset:	#(	[0,0,0], [100,0,0]  ) \
+		shapesAdvNoiseVals:#( 
+				#(	5.0, 100.0, 5.0, 0.5  ) \
+		) \
+		subDiv:	#(	4  ) \
+		shapesAdvNoiseOn:	#(	false, false  ) \
+		Twist:	#(	0.0  ) \
+		sectionsAdvSplines:#() \
+		splinesScale:	#(	1.0  ) \
+		sectionsAdvType:	#(	#none  ) \
+		type:#trunks  \
+		angle:	#(	0.0  ) \
+		genRVMfrom:	#(	[255,255,255]  ) \
+		genRVMto:	#(	[0,0,0]  ) \
+		shapesAdvType:	#(	#first  ) \
+	) \
+)   
+DataStream End

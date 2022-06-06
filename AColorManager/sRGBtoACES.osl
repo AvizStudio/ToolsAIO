@@ -1,0 +1,29 @@
+shader sRGBtoACES
+[[ string help = "Convert sRGB color/map to ACES",
+string label= "sRGBtoACES",
+string category = "AvizStudioTools" ]]
+(
+	color In = 0.5,
+	float Mix = 1.0 [[ float min = 0.0, float max = 1.0]],
+	int UpdateMix = 1 [[ string widget="checkBox", string label = "Update Mix with global value" ]],
+	output color Out = 0.0,
+)
+{
+	if (Mix <= 0)
+	{
+		Out = In;
+	}
+	else
+	{
+		float r = In[0];
+		float g = In[1];
+		float b = In[2];
+		color ACES = color (0.6131178129*r + 0.3411819959*g + 0.0457873443*b,
+							0.0699340823*r + 0.9181030375*g + 0.0119327755*b,
+							0.0204629926*r + 0.1067686634*g + 0.8727159106*b);
+		if (Mix >= 1.0) 
+			 Out = ACES;
+		else
+			Out = ACES*Mix + In*(1-Mix);
+	}
+}
