@@ -1,14 +1,9 @@
--- setup Exchange Store menu, and add our app to it.
+-- setup App Store menu
 (
     local stringExhangeStoreDefaultMenu = "App Store"
 
-    -- so this should ensure it is only one time only per user UI setup
-    -- MUST keep the value the SAME for all apps
     if menuMan.registerMenuContext 0x2adadafb then
     (
-        -- probably can take these out, but it shows that it is called only when needed...
-        print "LED: Creating Exchange Store Menu"
-
         -- Get the main menu bar
         local mainMenuBar = menuMan.getMainMenuBar()
 
@@ -18,22 +13,16 @@
         local submenuItem = menuMan.createSubMenuItem "test" subMenu
 
         mainMenuBar.addItem submenuItem menuPos
-        -- redraw the menu bar with the new item
+        -- redraw the menu bar
         menuMan.updateMenuBar()
     )
 
-    -- This one will allow an app to add theirs to existing exchange store app.
-    -- MUST use genclassid() to get this value and it should be DIFFERENT per app.
-    -- This then allows only onetime setup per app, per user UI setup
 
     local stringMacroScriptName = "AvizStudioTools_Setup" 
     local stringMacroScriptCategory = "AvizStudioTools"
     if menuMan.registerMenuContext 0x3947e3a1 then
     (
-        -- probably can take these out, but it shows that it is called only when needed...
-        print "Creating AvizStudioTools App Sub-Menu"
-
-        -- this should always succeed because above
+        -- this should always succeed
         local exchangeMenu = menuMan.findMenu stringExhangeStoreDefaultMenu
 
         -- create subMenu 
@@ -64,11 +53,11 @@
         local SubMenuItem = menuMan.createSubMenuItem "AvizStudioTools" subMenu
         exchangeMenu.addItem SubMenuItem -1
 
-        -- Let's also seperate each app...
+        -- separate each app
         local menuSepItem = menuMan.createSeparatorItem()
         exchangeMenu.addItem menuSepItem -1
 
-        -- redraw the menu bar with the new item
+        -- redraw the menu bar
         menuMan.updateMenuBar()
     )
 )
