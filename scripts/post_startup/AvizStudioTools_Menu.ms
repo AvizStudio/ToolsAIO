@@ -1,6 +1,6 @@
 -- setup App Store menu
 (
-    local stringAppStoreDefaultMenu = "App Store"
+    local stringExhangeStoreDefaultMenu = "App Store"
 
     if menuMan.registerMenuContext 0x2adadafb then
     (
@@ -8,7 +8,7 @@
         local mainMenuBar = menuMan.getMainMenuBar()
 
         -- Create the menu
-        local subMenu = menuMan.createMenu stringAppStoreDefaultMenu
+        local subMenu = menuMan.createMenu stringExhangeStoreDefaultMenu
         local menuPos = mainMenuBar.numItems()
         local submenuItem = menuMan.createSubMenuItem "test" subMenu
 
@@ -23,7 +23,7 @@
     if menuMan.registerMenuContext 0x3947e3a1 then
     (
         -- this should always succeed
-        local exchangeMenu = menuMan.findMenu stringAppStoreDefaultMenu
+        local exchangeMenu = menuMan.findMenu stringExhangeStoreDefaultMenu
 
         -- create subMenu 
         local subMenu = menuMan.createMenu stringMacroScriptCategory
@@ -46,11 +46,8 @@
         local actionItem6 = menuMan.createActionItem "ASmartObjects" stringMacroScriptCategory
         subMenu.addItem actionItem6 -1
 
-        local actionItem7 = menuMan.createActionItem "AHelper" stringMacroScriptCategory
+        local actionItem7 = menuMan.createActionItem stringMacroScriptName stringMacroScriptCategory
         subMenu.addItem actionItem7 -1
-
-        local actionItem8 = menuMan.createActionItem stringMacroScriptName stringMacroScriptCategory
-        subMenu.addItem actionItem8 -1
 
         -- create SubMenuItem
         local SubMenuItem = menuMan.createSubMenuItem "AvizStudioTools" subMenu
@@ -59,20 +56,6 @@
         -- separate each app
         local menuSepItem = menuMan.createSeparatorItem()
         exchangeMenu.addItem menuSepItem -1
-
-        -- redraw the menu bar
-        menuMan.updateMenuBar()
-    )
-    else if menuMan.registerMenuContext 0x3947e3a2 then
-    (
-        -- add AHelper to the menu
-        local subMenu = menuMan.findMenu "AvizStudioTools"
-
-        local actionItem7 = menuMan.createActionItem "AHelper" stringMacroScriptCategory
-        local addItem = actionItem7 != undefined
-        local numItems = subMenu.numItems()
-	    for i = 1 to numItems do if (subMenu.getItem i).getTitle() == "AHelper" then addItem = false
-        if addItem then subMenu.addItem actionItem7 numItems
 
         -- redraw the menu bar
         menuMan.updateMenuBar()

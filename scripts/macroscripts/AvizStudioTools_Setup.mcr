@@ -39,9 +39,3 @@ macroScript ATree3D category:"AvizStudioTools" internalCategory:"AvizStudioTools
 	global AvizStudioToolsSetup
 	try (AvizStudioToolsSetup()) catch(messageBox "AvizStudioTools - Setup not found!" title:"AvizStudioTools")
 )
-
-macroScript AHelper category:"AvizStudioTools" internalCategory:"AvizStudioTools" tooltip:"AvizStudioTools - AHelper" buttonText:"AHelper"
-(
-	global AvizStudioToolsSetup
-	try (AvizStudioToolsSetup()) catch(messageBox "AvizStudioTools - Setup not found!" title:"AvizStudioTools")
-)
