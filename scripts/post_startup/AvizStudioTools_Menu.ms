@@ -17,7 +17,6 @@
         menuMan.updateMenuBar()
     )
 
-
     local stringMacroScriptName = "AvizStudioTools_Setup" 
     local stringMacroScriptCategory = "AvizStudioTools"
     if menuMan.registerMenuContext 0x3947e3a1 then
@@ -49,8 +48,11 @@
         local actionItem7 = menuMan.createActionItem "AHelper" stringMacroScriptCategory
         subMenu.addItem actionItem7 -1
 
-        local actionItem8 = menuMan.createActionItem stringMacroScriptName stringMacroScriptCategory
+        local actionItem8 = menuMan.createActionItem "AImagine" stringMacroScriptCategory
         subMenu.addItem actionItem8 -1
+
+        local actionItemLast = menuMan.createActionItem stringMacroScriptName stringMacroScriptCategory
+        subMenu.addItem actionItemLast -1
 
         -- create SubMenuItem
         local SubMenuItem = menuMan.createSubMenuItem "AvizStudioTools" subMenu
@@ -63,7 +65,8 @@
         -- redraw the menu bar
         menuMan.updateMenuBar()
     )
-    else if menuMan.registerMenuContext 0x3947e3a2 then
+
+    if menuMan.registerMenuContext 0x3947e3a2 then
     (
         -- add AHelper to the menu
         local subMenu = menuMan.findMenu "AvizStudioTools"
@@ -73,6 +76,21 @@
         local numItems = subMenu.numItems()
 	    for i = 1 to numItems do if (subMenu.getItem i).getTitle() == "AHelper" then addItem = false
         if addItem then subMenu.addItem actionItem7 numItems
+
+        -- redraw the menu bar
+        menuMan.updateMenuBar()
+    )
+
+    if menuMan.registerMenuContext 0x3947e3a3 then
+    (
+        -- add AHelper to the menu
+        local subMenu = menuMan.findMenu "AvizStudioTools"
+
+        local actionItem8 = menuMan.createActionItem "AImagine" stringMacroScriptCategory
+        local addItem = actionItem8 != undefined
+        local numItems = subMenu.numItems()
+	    for i = 1 to numItems do if (subMenu.getItem i).getTitle() == "AImagine" then addItem = false
+        if addItem then subMenu.addItem actionItem8 numItems
 
         -- redraw the menu bar
         menuMan.updateMenuBar()

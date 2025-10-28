@@ -34,6 +34,7 @@
 		ast_menu.CreateAction "9780e634-d52c-4488-8596-e35e93a001ff" 647394 "ASnapshots`AvizStudioTools"
 		ast_menu.CreateAction "af22621b-8884-4b40-949f-0a819276fcc5" 647394 "ASmartObjects`AvizStudioTools"
 		ast_menu.CreateAction "b25bb7b9-02f8-4b38-893c-cbe1287961f3" 647394 "AHelper`AvizStudioTools"
+		ast_menu.CreateAction "c2f935f4-8eff-4ff1-9e6f-bf8713f51d36" 647394 "AImagine`AvizStudioTools"
 		ast_menu.CreateAction "6b74b067-ed9b-4aa3-9bc5-7cc6a443ff28" 647394 "AvizStudioTools_Setup`AvizStudioTools"
 	)
 	callbacks.removeScripts id:#AvizStudioToolsMenu
